@@ -1,0 +1,22 @@
+--- ./eProsima/ROS-RMW-Fast-RTPS-cpp/rmw_fastrtps_cpp/src/functions.cpp
++++ ./eProsima/ROS-RMW-Fast-RTPS-cpp/rmw_fastrtps_cpp/src/functions.cpp
+@@ -578,10 +608,9 @@ extern "C"
+             return NULL;
+         }
+ 
+-        eprosima::Log::setVerbosity(eprosima::VERB_ERROR);
+-
+         ParticipantAttributes participantParam;
+         participantParam.rtps.builtin.domainId = static_cast<uint32_t>(domain_id);
++        //participantParam.rtps.builtin.leaseDuration_announcementperiod.seconds = 5;
+         participantParam.rtps.setName(name);
+ 
+         Participant *participant = Domain::createParticipant(participantParam);
+@@ -728,6 +757,7 @@ extern "C"
+         publisherParam.topic.topicKind = NO_KEY;
+         publisherParam.topic.topicDataType = type_name;
+         publisherParam.topic.topicName = topic_name;
++        //publisherParam.times.heartbeatPeriod.seconds = 3;
+ 
+         if(!get_datawriter_qos(*qos_policies, publisherParam))
+             goto fail;+++ ./eProsima/ROS-RMW-Fast-RTPS-cpp/rmw_fastrtps_cpp/src/functions.cpp

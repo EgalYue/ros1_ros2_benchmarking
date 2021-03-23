@@ -1,0 +1,29 @@
+//http://stackoverflow.com/questions/31548067/what-does-pragma-keylist-keyword-do
+//Note: long - Defines a long integer data type, equivalent to IDL/CDR long. A 32-bit signed long integer value. (RTI)
+module messages
+{
+    struct RobotControl
+    {
+        long id;
+        long x;
+        long y;
+        long z;
+    };
+#pragma keylist RobotControl
+
+    struct RobotAlarm
+    {
+        long id;
+        long alarm1;
+        long alarm2;
+    };
+#pragma keylist RobotAlarm
+
+    struct RobotSensor
+    {
+        long id;
+        string data;
+    };
+#pragma keylist RobotSensor
+
+};

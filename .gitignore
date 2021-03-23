@@ -1,0 +1,11 @@
+.idea/
+build-*/
+comm/rti_connext_dds/
+current
+results/
+python/*.pyc
+python/__pycache__
+.*.swp
+comm/CMakeLists.txt.*
+.vscode
+./ros2_benchmarking_results.zip

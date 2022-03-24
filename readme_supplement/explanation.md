@@ -37,7 +37,7 @@ ros1,ros2opensplice,ros2fastrtps,ros2connext,opensplice,ros1bridge
 cd ros2_benchmarking
 ./python/run.py --build ros1:base ros1:node
 ```
-ros2镜像请不要使用本项目提供的dockerfile, 请联系 yuehu@ninebot.com 索要已经构建好的 ros2:fastrtps, ros2:opensplice, ros2:connext 镜像.  
+ros2镜像请不要使用本项目提供的dockerfile, 请联系 yue.hu@ninebot.com 索要已经构建好的 ros2:fastrtps, ros2:opensplice, ros2:connext 镜像.  
 
 1. 构建ros2镜像过程需要源码安装, 参考 https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/  
 需要把 /ros2_benchmarking/comm/ros2node/messages 拷贝到 ros2镜像 /ros2_ws/src/ros2/common_interfaces/messages 目录下, 然后再 build ros2.  
